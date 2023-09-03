@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: Setting an error message
         run: echo "::error::Missing semicolon."
+      - name: test1
+        run: echo "::error title=Testje,file=app.js,line=1,endLine=1,col=2,endColumn=4::Missing testje"
