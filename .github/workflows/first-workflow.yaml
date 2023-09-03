@@ -17,3 +17,11 @@ jobs:
     steps:
       - name: View SW Version
         run: sw_vers
+  dependant-job:
+    runs-on: windows-latest
+    needs: [run-shell]
+    steps:
+      - name: echo a ps string
+        run: Write-output "Windows String"
+      - name: Error Step
+        run: doesnotexist
