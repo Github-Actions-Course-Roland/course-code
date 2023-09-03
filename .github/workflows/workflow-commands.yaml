@@ -15,3 +15,12 @@ jobs:
         run: echo "::warning title=Testje,file=app.js,line=1,endLine=1,col=2,endColumn=4::Missing testje"
       - name: test 4
         run: echo "::notice title=Testje,file=app.js,line=1,endLine=1,col=2,endColumn=4::Missing testje"
+      - name: Group of logs
+        run: |
+          echo "::group::My group test"
+          echo "Inside group"
+          echo "::endgroup::"
+      - name: Mask string
+        run: echo "::add-mask::Hidden string"
+      - name: Echo secret string
+        run: Echo "secret string"
