@@ -21,6 +21,6 @@ jobs:
           echo "Inside group"
           echo "::endgroup::"
       - name: Mask string
-        run: echo "::add-mask::Hidden string"
+        run: echo "::add-mask::Mona The Octocat"
       - name: echo secret string
-        run: Echo "secret string"
+        run: echo "secret string"
